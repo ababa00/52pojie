@@ -38,7 +38,7 @@ for cookie in cookies.split("&"):
         if "htVC_2132_auth" in key:
             cookie += "htVC_2132_auth=" + urllib.parse.quote(i.split("=")[1]) + ";"
     if not ('htVC_2132_saltkey' in cookie or 'htVC_2132_auth' in cookie):
-        print("第{n}cookie中未包含htVC_2132_saltkey或htVC_2132_auth字段，请检查cookie")
+        print(f"第{n}cookie中未包含htVC_2132_saltkey或htVC_2132_auth字段，请检查cookie")
         sys.exit()
     headers = {
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,"
